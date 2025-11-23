@@ -3,25 +3,26 @@ import pandas as pd
 
 st.set_page_config(page_title="Audit de flux produits", page_icon="📡", layout="centered")
 
-st.title("Audit de flux produits")
+st.title("Audit de flux produits Shopping")
 
-st.markdown("""
-Bienvenue dans ton outil d’audit de flux produits !  
-Voici comment ça fonctionne :
-1. **Upload ton flux** sur cette page  
-2. Accède ensuite à :
-   - 📊 *Analyse du flux* (structure, champs manquants, etc.)
-   - 🧠 *Analyse des titres* (doublons, longueur, qualité)
+st.write("""
+Bienvenue dans notre outil d’audit de flux produits !  
+1. **Upload ton flux** ci contre
+2. Accède ensuite à l'analyse des champs de ton flux produits.
 """)
 
 st.write("Pour cela rendez-vous dans votre sur votre merchant center dans Paramétres > Sources de données > Affichez l'historique des mises à jour")
 
 st.image("./images/MC-histo_maj.png", use_column_width=True)
 
+st.write("Clique ensuite sur 'Télécharger le fichier de la source de données' pour uploader votre flux.")
+
+st.image("./images/MC-histo_upload.png", use_column_width=True)
+
+st.write("Vous n'avez plus qu'à uplaoder le fichir dans l'outil via le menu de gauche !")
 
 st.sidebar.write("## Upload de flux produit")
 
-# --- Upload du fichier ---
 uploaded_file = st.sidebar.file_uploader("📥 Charge ton flux produit", type=["csv"])
 
 if uploaded_file:
