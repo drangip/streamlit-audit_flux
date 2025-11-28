@@ -24,7 +24,7 @@ uploaded_file = st.sidebar.file_uploader("📥 Charge ton flux produit", type=["
 
 if uploaded_file:
     try:
-        flux = pd.read_csv(uploaded_file, sep=None, engine='python')
+        flux = pd.read_csv(uploaded_file, sep="|", engine='python')
         st.session_state["flux_data"] = flux  # 🔹 Stockage dans la session
         st.success("✅ Flux chargé et enregistré en mémoire.")
         st.dataframe(flux.head())
