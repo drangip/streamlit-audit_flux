@@ -20,7 +20,7 @@ st.write("Vous n'avez plus qu'à uploader le fichier dans ci contre dans la side
 
 st.sidebar.write("## Upload de flux produit")
 
-uploaded_file = st.sidebar.file_uploader("📥 Charge ton flux produit", type=["csv"])
+uploaded_file = st.sidebar.file_uploader("📥 Charge ton flux produit")
 
 if uploaded_file:
     try:
