@@ -12,7 +12,7 @@ st.write("Le titre du produit est important à deux niveaux")
 st.write("- **Son contenu** : Le titre conditionne les requêtes sur lesquelles nous allons apparaître.")
 st.write("- **Sa mise en forme** : Il est l’un des 3 éléments essentiels avec l’image et le prix qui construit l’annonce shopping et a donc un impact important sur le taux de clic. Il doit contenir le générique produits, sa marque, ses caractéristiques. Il est recommandé que le titre soit unique à chacun des produits du flux.")
 
-st.write("> Audit de vos titres")
+st.write("> Analyse des titres en doublon")
 
 # --- Vérification du flux ---
 if "flux_data" not in st.session_state:
@@ -64,7 +64,7 @@ with col2:
 st.markdown("---")
 
 # --- Analyse longueur des titres ---
-st.subheader("Longueur des titres")
+st.write("> Analyse de la longueur des titres")
 
 dftitle = pd.DataFrame(flux['title'])
 dftitle['nb_caracteres'] = dftitle['title'].str.len()
