@@ -4,7 +4,13 @@ import matplotlib.pyplot as plt
 # --- Configuration de la page ---
 st.set_page_config(page_title="Analyse des titres", layout="centered")
 
-st.header("🧠 Analyse des titres produits")
+st.header("Analyse des titres produits")
+
+st.write("> Les bonnes pratiques sur le titre")
+st.write("Le titre du produit est important à deux niveaux")
+st.write("- **Son contenu** : Le titre conditionne les requêtes sur lesquelles nous allons apparaître.")
+st.write("- **Sa mise en forme** : Il est l’un des 3 éléments essentiels avec l’image et le prix qui construit l’annonce shopping et a donc un impact important sur le taux de clic. Il doit contenir le générique produits, sa marque, ses caractéristiques. Il est recommandé que le titre soit unique à chacun des produits du flux.")
+
 
 # --- Vérifie si le flux est déjà chargé ---
 if "flux_data" not in st.session_state:
