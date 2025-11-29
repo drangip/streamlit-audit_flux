@@ -3,7 +3,7 @@ import pandas as pd
 
 st.set_page_config(page_title="Audit de flux produits", page_icon="📡", layout="centered")
 
-st.title("Audit de flux produits Shopping")
+st.image("./images/flux_audit_banner.png", use_column_width=True)
 
 st.write("""Cette application à pour but de faire un audit de votre flux produits shopping.
 """)
